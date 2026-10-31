@@ -1,0 +1,14 @@
+from brain import sor_beyne
+print("🌿 Kainat Beyni Hazır! Direkt yaz, çıkmak için 'q' yaz.")
+while True:
+    try:
+        p = input("\nSen: ")
+        if p.lower() in ["q","exit","quit"]:
+            break
+        if not p.strip():
+            continue
+        print("\n🧠 Beyin düşünüyor...")
+        cevap = sor_beyne(p)
+        print(f"\nBeyin: {cevap}\n")
+    except KeyboardInterrupt:
+        break
