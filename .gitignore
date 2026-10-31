@@ -1,0 +1,4 @@
+.env
+*.key
+auth.json
+__pycache__/

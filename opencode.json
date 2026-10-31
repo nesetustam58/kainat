@@ -5,19 +5,11 @@
       "npm": "@ai-sdk/openai-compatible",
       "name": "Nvidia NIM",
       "options": {
-        "baseURL": "https://integrate.api.nvidia.com/v1",
-        "apiKey": "nvapi-aTebX6VQD9aKYvjkJaK1ut8r_AtmMnT3cSDXOgJae7ASL3GM33WBKSVV4TBE6rQfnvapi-aTebX6VQD9aKYvjkJaK1ut8r_AtmMnT3cSDXOgJae7ASL3GM33WBKSVV4TBE6rQf"
+        "baseURL": "https://integrate.api.nvidia.com/v1"
       },
       "models": {
-        "meta/muse-glimmer-30b": {
-          "name": "Muse Glimmer 30B"
-        },
-        "meta/llama-3.3-70b-instruct": {
-          "name": "Llama 3.3 70B"
-        },
-        "meta/llama-3.2-90b-vision-instruct": {
-          "name": "Vision 90B"
-        }
+        "meta/muse-glimmer-30b": {"name": "Muse Glimmer 30B"},
+        "meta/llama-3.3-70b-instruct": {"name": "Llama 3.3 70B"}
       }
     }
   }
