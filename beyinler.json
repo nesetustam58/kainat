@@ -1,0 +1,28 @@
+{
+  "beyinler": {
+    "meta/muse-glimmer-30b": {
+      "isim": "Ana Beyin Builder",
+      "gorev": "kod yazma, veri cekme, arayuz",
+      "anahtar_kelimeler": ["kod", "yaz", "api", "cek", "veri", "arayuz", "dosya", "olustur", "script", "ui", "component", "entegre"],
+      "ornek": "Wikipedia API'den veri cek"
+    },
+    "meta/llama-3.3-70b-instruct": {
+      "isim": "Dogrulama Beyni Verifier",
+      "gorev": "bilgi dogrulama, biyoloji",
+      "anahtar_kelimeler": ["dogrula", "dogru mu", "zehir", "yenir", "nedir", "bilgi", "acikla", "habitat", "ozellik", "toksik", "faydali"],
+      "ornek": "Rosa canina zehirli mi"
+    },
+    "meta/llama-3.2-90b-vision-instruct": {
+      "isim": "Gorsel Beyin Vision",
+      "gorev": "gorsel tanima",
+      "anahtar_kelimeler": ["fotograf", "resim", "gorsel", "yaprak", "cicek", "tani", "image", "bak"],
+      "ornek": "Bu yaprak hangi bitki"
+    },
+    "meta/llama-3.1-8b-instruct": {
+      "isim": "Hizli Beyin Flash",
+      "gorev": "hizli duzeltme",
+      "anahtar_kelimeler": ["hizlica", "duzelt", "bug", "test", "dene", "kucuk"],
+      "ornek": "Hizlica bug duzelt"
+    }
+  }
+}

@@ -1,14 +1,14 @@
 from brain import sor_beyne
-print("🌿 Kainat Beyni Hazır! Direkt yaz, çıkmak için 'q' yaz.")
+from brain_router import otomatik_beyin_sec
+print("🌿 Kainat Otomatik Beyni Hazir! Direkt yaz, q ile cik.\n")
 while True:
     try:
-        p = input("\nSen: ")
-        if p.lower() in ["q","exit","quit"]:
-            break
-        if not p.strip():
-            continue
-        print("\n🧠 Beyin düşünüyor...")
-        cevap = sor_beyne(p)
+        p = input("Sen: ")
+        if p.lower() in ["q","exit","quit"]: break
+        if not p.strip(): continue
+        model, isim = otomatik_beyin_sec(p)
+        print(f"\n🧠 Secilen: {isim}\n   Model: {model}\n   Dusunuyor...")
+        cevap = sor_beyne(p, model=model)
         print(f"\nBeyin: {cevap}\n")
     except KeyboardInterrupt:
         break
