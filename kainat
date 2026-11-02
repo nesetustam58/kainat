@@ -1,14 +1,30 @@
+#!/usr/bin/env python3
 from brain import sor_beyne
 from brain_router import otomatik_beyin_sec
-print("🌿 Kainat Otomatik Beyni Hazir! Direkt yaz, q ile cik.\n")
+import os
+
+print("🌿 Kainat Otomatik Beyni Hazir! Direkt yaz, q ile cik.")
+print("💡 Ipucu: proje_detay.md veya gorev.md yazarsan icini okuyup anlarim.\n")
+
 while True:
     try:
         p = input("Sen: ")
-        if p.lower() in ["q","exit","quit"]: break
-        if not p.strip(): continue
+        if p.lower() in ["q","exit","quit"]:
+            break
+        if not p.strip():
+            continue
+        
+        if os.path.exists(p.strip()) and p.strip().endswith(('.md','.txt','.json')):
+            print(f"📄 Dosya okunuyor: {p.strip()}")
+            with open(p.strip(), 'r', encoding='utf-8') as f:
+                p = f.read()
+            print(f"   -> {len(p)} karakter okundu, beyne gönderiliyor...\n")
+
         model, isim = otomatik_beyin_sec(p)
-        print(f"\n🧠 Secilen: {isim}\n   Model: {model}\n   Dusunuyor...")
-        cevap = sor_beyne(p, model=model)
-        print(f"\nBeyin: {cevap}\n")
+        print(f"🧠 Secilen: {isim}\n   Model: {model}\n   Dusunuyor...\n")
+        print("Beyin:\n")
+        # HIZLI AKIS + GUVENLI DOSYA YAZMA brain.py icinde
+        sor_beyne(p, model=model, max_tokens=6000, stream=False)
+        print("\n" + "-"*50 + "\n")
     except KeyboardInterrupt:
         break
